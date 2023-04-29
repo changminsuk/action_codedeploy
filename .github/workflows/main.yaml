@@ -20,11 +20,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v2.5.2
-
-      - name: Run Node.js Script
-        run: node api.js
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+      - run: npm install
+      - run: npm run build --if-present
+      - run: npm test
 
       - name: Make zip file
         run: zip -qq -r ./$GITHUB_SHA.zip .
