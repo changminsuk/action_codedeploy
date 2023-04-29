@@ -18,15 +18,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Install Node.js and NPM
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16.x'
-
-      - name: Install dependencies
-        run: npm install
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.5.2
 
       - name: Run Node.js Script
         run: node api.js
