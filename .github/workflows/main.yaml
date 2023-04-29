@@ -20,10 +20,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Set up JDK 1.8
-        uses: actions/setup-java@v1
+      - name: Install Node.js and NPM
+        uses: actions/setup-node@v2
         with:
-          java-version: 1.8
+          node-version: '16.x'
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Run Node.js Script
         run: node api.js
