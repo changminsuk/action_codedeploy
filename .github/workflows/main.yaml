@@ -25,13 +25,8 @@ jobs:
         with:
           java-version: 1.8
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-        shell: bash
-
-      - name: Build with Gradle
-        run: ./gradlew build
-        shell: bash
+      - name: Run Node.js Script
+        run: node api.js
 
       - name: Make zip file
         run: zip -qq -r ./$GITHUB_SHA.zip .
