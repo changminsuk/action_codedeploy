@@ -32,7 +32,7 @@ app.get('/data', (req, res) => {
   }
 });
 
-// 서버 실행
+// 서버 실행2
 const port = 3000;
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
