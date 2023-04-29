@@ -1,1 +1,38 @@
-.
+const express = require('express');
+const mysql = require('mysql');
+
+const app = express();
+
+const connection = mysql.createConnection({
+  host: 'mysqldb.cjrqn6r5ucwk.ap-northeast-2.rds.amazonaws.com',
+  user: 'admin',
+  password: 'Skw7640*',
+  database: 'CxB',
+});
+
+// 데이터 조회 API
+app.get('/data', (req, res) => {
+  const { param1, param2 } = req.query;
+
+  if (param1 === 'uid') {
+    const sql = 'SELECT * FROM users WHERE ?? = ?';
+    const inserts = [param1, param2];
+    const query = mysql.format(sql, inserts);
+
+    connection.query(query, (error, results, fields) => {
+      if (error) {
+        console.error(error);
+        res.status(500).send('Internal Server Error');
+      } else {
+        res.json(results);
+      }
+    });
+  } else {
+    res.status(400).send('Bad Request');
+  }
+});
+
+// 서버 실행
+const port = 3000;
+app.listen(port, () => {
+  console.log(`Server started on port ${port}`);
