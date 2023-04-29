@@ -26,7 +26,7 @@ jobs:
           node-version: '16.x'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Run Node.js Script
         run: node api.js
