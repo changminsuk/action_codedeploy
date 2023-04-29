@@ -14,7 +14,7 @@ env:
 jobs:
   deploy:
     name: DEPLOY
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
