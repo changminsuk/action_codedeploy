@@ -8,7 +8,7 @@ permissions:
   - object: /opt/CodeDeployApp/
     owner: ubuntu
     group: ubuntu
-    #mode: 755
+    mode: 777
 hooks:
   AfterInstall:
     # location은 프로젝트의 root경로를 기준
