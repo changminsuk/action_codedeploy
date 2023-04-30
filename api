@@ -10,7 +10,7 @@ const connection = mysql.createConnection({
   database: 'CxB',
 });
 
-// 데이터 조회 API9sibal
+// 데이터 조회 API9sibalaaaaaaaa
 app.get('/data', (req, res) => {
   const { param1, param2 } = req.query;
 
