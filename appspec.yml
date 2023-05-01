@@ -3,11 +3,9 @@ os: linux
 
 files:
   - source: /
-    #destination: /opt/CodeDeployApp
-    destination: #HOME/CodeDeployApp
+    destination: /opt/CodeDeployApp
 permissions:
-  #- object: /opt/CodeDeployApp/
-  - object: #HOME/CodeDeployApp
+  - object: /opt/CodeDeployApp/
     owner: ubuntu
     group: ubuntu
     mode: 777
