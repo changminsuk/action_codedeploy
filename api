@@ -32,7 +32,8 @@ app.get('/data', (req, res) => {
   }
 });
 
-// 서버 실행2
+// 서버 실행
 const port = 3000;
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
+});
