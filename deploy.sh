@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-REPOSITORY=/opt/CodeDeployApp
+REPOSITORY=$HOME/CodeDeployApp
 cd $REPOSITORY
 
 APP_NAME=action_codedeploy
