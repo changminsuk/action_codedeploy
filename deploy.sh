@@ -4,8 +4,6 @@ REPOSITORY=/opt/CodeDeployApp
 cd $REPOSITORY
 
 APP_NAME=action_codedeploy
-JAR_NAME=$(ls $REPOSITORY | grep '.jar' | tail -n 1)
-JAR_PATH=$REPOSITORY/$JAR_NAME
 
 CURRENT_PID=$(pgrep -f $APP_NAME)
 
@@ -18,6 +16,5 @@ else
   sleep 5
 fi
 
-echo "> $JAR_PATH 배포"
 sudo pm2 stop api
 sudo pm2 start api
