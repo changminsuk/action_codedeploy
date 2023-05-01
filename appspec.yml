@@ -4,6 +4,7 @@ os: linux
 files:
   - source: /
     destination: /opt/CodeDeployApp
+file_exists_behavior: OVERWRITE
 permissions:
   - object: /opt/CodeDeployApp/
     owner: ubuntu
