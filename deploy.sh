@@ -19,5 +19,5 @@ else
 fi
 
 echo "> $JAR_PATH 배포"
-#nohup node api.js > /dev/null 2> /dev/null < /dev/null &
-node api
+sudo pm2 stop api
+sudo pm2 start api
