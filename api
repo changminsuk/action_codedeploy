@@ -11,7 +11,7 @@ const connection = mysql.createConnection({
 });
 
 app.get('/', (req,res) => {
-   res.send("🚀 서버가 정상 실행중입니다.");
+   res.send("🚀 🚀 서버가 정상 실행중입니다.");
 });
 
 // 데이터 조회 API9sibal2
