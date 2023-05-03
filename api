@@ -15,7 +15,7 @@ const message = `
 <br>
 후원 : 카카오뱅크 석창민 3333-14-8217656
 <br>
-Auto scaling test2
+Auto scaling test23
 `;
 
 app.get('/', (req, res) => {
