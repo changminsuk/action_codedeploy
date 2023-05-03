@@ -11,7 +11,7 @@ const connection = mysql.createConnection({
 });
 
 app.get('/', (req,res) => {
-   res.send("🚀🚀🚀 서버가 정상 실행중입니다. 🚀🚀🚀<br>후원 : 카카오뱅크 석창민 3333-14-8217656");
+   res.send("🚀🚀🚀 서버가 정상 실행중입니다222. 🚀🚀🚀<br>후원 : 카카오뱅크 석창민 3333-14-8217656");
 });
 
 // 데이터 조회 API9sibal2
