@@ -16,6 +16,7 @@ else
   sleep 5
 fi
 
+sudo apt install npm
 sudo npm install pm2 -g
 sudo pm2 stop api
 sudo pm2 start api
