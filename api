@@ -41,7 +41,11 @@ app.get('/data', (req, res) => {
 });
 
 app.get('/showUSERS', (req, res) => {
-  const sql = 'SELECT * FROM users';
+  const sql = `
+    SELECT * FROM users
+    JOIN jobs
+    ON users.job_id = jobs.job_id
+  `;
   const query = mysql.format(sql);
 
   connection.query(query, (error, results, fields) => {
