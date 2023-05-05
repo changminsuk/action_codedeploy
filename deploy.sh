@@ -16,5 +16,5 @@ else
   sleep 5
 fi
 
-sudo pm2 stop api
-sudo pm2 start api
+sudo /usr/local/bin/pm2 stop api
+sudo /usr/local/bin/pm2 start api
