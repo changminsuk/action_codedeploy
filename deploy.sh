@@ -16,5 +16,6 @@ else
   sleep 5
 fi
 
-sudo /usr/local/bin/pm2 stop api
-sudo /usr/local/bin/pm2 start api
+sudo npm install pm2 -g
+sudo pm2 stop api
+sudo pm2 start api
