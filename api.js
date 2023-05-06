@@ -11,7 +11,7 @@ const connection = mysql.createConnection({
 });
 
 const message = `
-🚀🚀🚀 서버가 정상 실행중입니다.22 🚀🚀🚀
+🚀🚀🚀 서버가 정상 실행중입니다.2233 🚀🚀🚀
 <br>
 후원 : 카카오뱅크 석창민 3333-14-8217656
 <br>
@@ -41,11 +41,7 @@ app.get('/data', (req, res) => {
 });
 
 app.get('/showUSERS', (req, res) => {
-  const sql = `
-    SELECT * FROM users_TB
-    JOIN jobs
-    ON users.job_id = jobs.job_id
-  `;
+  const sql = `SELECT * FROM users_TB`;
   const query = mysql.format(sql);
 
   connection.query(query, (error, results, fields) => {
