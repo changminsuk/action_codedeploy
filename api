@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 app.get('/data', (req, res) => {
   const { param1, param2 } = req.query;
 
-  const sql = 'SELECT * FROM users WHERE ?? = ?';
+  const sql = 'SELECT * FROM users_TB WHERE ?? = ?';
   const inserts = [param1, param2];
   const query = mysql.format(sql, inserts);
 
@@ -42,7 +42,7 @@ app.get('/data', (req, res) => {
 
 app.get('/showUSERS', (req, res) => {
   const sql = `
-    SELECT * FROM users
+    SELECT * FROM users_TB
     JOIN jobs
     ON users.job_id = jobs.job_id
   `;
