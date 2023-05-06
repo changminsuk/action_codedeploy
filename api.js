@@ -11,7 +11,7 @@ const connection = mysql.createConnection({
 });
 
 const message = `
-🚀🚀🚀 서버가 정상 실행중입니다. 🚀🚀🚀
+🚀🚀🚀 서버가 정상 실행중입니다.22 🚀🚀🚀
 <br>
 후원 : 카카오뱅크 석창민 3333-14-8217656
 <br>
